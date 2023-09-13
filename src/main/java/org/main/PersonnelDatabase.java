@@ -7,10 +7,6 @@ import java.util.Scanner;
 
 public abstract class PersonnelDatabase {
     protected static ArrayList<Personnel> personnelList = new ArrayList<>();
-
-    public static ArrayList<Personnel> get(){
-        return personnelList;
-    }
     public static void printByDateEmployed(){
         List<Personnel> personnelListByDateEmployed = new ArrayList<>(personnelList);
         personnelListByDateEmployed.sort((o1, o2) -> (int) (o1.getDateOfEmploymentEpochDay() - o2.getDateOfEmploymentEpochDay()));
