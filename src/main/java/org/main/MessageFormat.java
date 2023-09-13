@@ -15,9 +15,8 @@ public abstract class MessageFormat {
         MessageFormat.hr();
     }
     public static String genderToText(String gender){
-        String genderToText = "Male";
-        if (gender.equals("F")) genderToText = "Female";
+        String genderToText = "male";
+        if (gender.equals("F")) genderToText = "female";
         return genderToText;
     }
-    // comment for the heck of it
 }

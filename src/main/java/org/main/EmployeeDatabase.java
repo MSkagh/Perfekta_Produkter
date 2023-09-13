@@ -27,7 +27,7 @@ public class EmployeeDatabase extends PersonnelDatabase{
                 sumSalary += ((Employee)employee).getSalary();
         }
         try {
-            MessageFormat.result("Average salary of "+genderFullText+":\n" +
+            MessageFormat.result("Average salary of "+genderFullText+"s :\n" +
                     Arithmetic.averageOf(sumSalary, sizeSalary));
         }catch(Exception e) {
             MessageFormat.error("Data not available");

@@ -44,7 +44,6 @@ public class Input {
         int day = 0;
 
         do{
-            System.out.println("Please enter a date (YYYYMMDD)");
             String rawInput = scanner.nextLine();
             if (rawInput.matches("[0-9]{8}")) {
                 year = parseInt(rawInput.substring(0,4));
@@ -54,7 +53,7 @@ public class Input {
                 if(month < 13 && day < 32) {
                     parsing = false;
                 } else {MessageFormat.error("Invalid date");}
-            }
+            }else {System.out.println("Please enter a date (YYYYMMDD)");}
         }while(parsing);
 
         return LocalDate.of(year, month, day);
